@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Debts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="tracking-page">
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    DebtTracker
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" id="darkModeToggle"><i class="fas fa-moon"></i></a></li>
+                <li><a href="#" id="exportData"><i class="fas fa-download"></i> Export</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-background"></div>
+
+    <div class="tracking-container">
+        <div class="quick-stats">
+            <div class="stat-card">
+                <i class="fas fa-list-alt"></i>
+                <h3>Active Debts</h3>
+                <p id="activeDebtsCount">0</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-check-circle"></i>
+                <h3>Completed</h3>
+                <p id="completedDebtsCount">0</p>
+            </div>
+            <div class="stat-card danger">
+                <i class="fas fa-trash-alt"></i>
+                <h3>Delete All</h3>
+                <button id="deleteAllBtn" class="vintage-btn danger">Clear Records</button>
+            </div>
+        </div>
+
+        <div class="tracking-header">
+            <h1>Track Your Debts</h1>
+            <p>Keep track of what you owe and celebrate as you become debt-free!</p>
+        </div>
+
+        <div class="tracking-grid">
+            <div class="tracking-card">
+                <h2>Add New Debt</h2>
+                <form id="addDebtForm">
+                    <input type="text" placeholder="Debt Description" required>
+                    <input type="number" placeholder="Amount" required>
+                    <button type="submit" class="vintage-btn">Add Debt</button>
+                </form>
+            </div>
+
+            <div class="tracking-card">
+                <h2>Record Payment</h2>
+                <form id="payDebtForm">
+                    <select id="debtSelect" required>
+                        <option value="">Select Debt</option>
+                    </select>
+                    <input type="number" placeholder="Payment Amount" required>
+                    <button type="submit" class="vintage-btn">Record Payment</button>
+                </form>
+            </div>
+
+            <div class="tracking-card summary-card">
+                <h2>Summary</h2>
+                <div id="debtSummary">
+                    <div class="summary-item">
+                        <span>Total Debts:</span>
+                        <span id="totalDebts">₹0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Total Paid:</span>
+                        <span id="totalPaid">₹0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Remaining:</span>
+                        <span id="totalRemaining">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="debts-list-container">
+            <h2>Your Active Debts</h2>
+            <div id="debtsList" class="debts-grid"></div>
+        </div>
+    </div>
+
+    <script src="tracking.js"></script>
+</body>
+</html>

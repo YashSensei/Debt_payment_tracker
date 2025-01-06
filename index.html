@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debt Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">DebtTracker</div>
+      <ul class="nav-links">
+        <li><a href="#track">Track</a></li>
+        <li><a href="#coffee">Buy a Coffee</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="background-elements">
+    <div class="floating-icon"><i class="fas fa-coins"></i></div>
+    <div class="floating-icon"><i class="fas fa-wallet"></i></div>
+    <div class="floating-icon"><i class="fas fa-piggy-bank"></i></div>
+    <div class="floating-icon"><i class="fas fa-chart-line"></i></div>
+  </div>
+
+  <section id="track" class="section fade-in">
+    <div class="hero-content">
+      <h1>Start Your Debt-Free Journey</h1>
+      <div class="subtitle-wrapper">
+        <i class="fas fa-star"></i>
+        <p>Take control of your finances by tracking your debts efficiently</p>
+        <i class="fas fa-star"></i>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-tasks"></i>
+          <h3>Track Debts</h3>
+          <p>Easily manage all your debts in one place</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-chart-pie"></i>
+          <h3>Visual Progress</h3>
+          <p>See your debt-free journey progress</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-bell"></i>
+          <h3>Celebrations</h3>
+          <p>Get motivated with debt-free celebrations</p>
+        </div>
+      </div>
+      <a href="tracking.html" class="cta-button">Start Tracking</a>
+    </div>
+  </section>
+
+  <div id="trackingModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modal-tabs">
+        <button class="tab-btn active" data-tab="addDebt">Add Debt</button>
+        <button class="tab-btn" data-tab="payDebt">Record Payment</button>
+        <button class="tab-btn" data-tab="viewDebts">View All Debts</button>
+      </div>
+      <div id="addDebt" class="tab-content active">
+        <h2>Add New Debt</h2>
+        <form id="addDebtForm">
+          <input type="text" placeholder="Debt Description" required>
+          <input type="number" placeholder="Amount" required>
+          <button type="submit">Add Debt</button>
+        </form>
+      </div>
+      <div id="payDebt" class="tab-content">
+        <h2>Record Payment</h2>
+        <form id="payDebtForm">
+          <select id="debtSelect" required>
+            <option value="">Select Debt</option>
+          </select>
+          <input type="number" placeholder="Payment Amount" required>
+          <button type="submit">Record Payment</button>
+        </form>
+      </div>
+      <div id="viewDebts" class="tab-content">
+        <h2>Your Debts</h2>
+        <div id="debtsList"></div>
+      </div>
+    </div>
+  </div>
+
+  <section id="coffee" class="section fade-in">
+    <div class="coffee-section">
+      <div class="coffee-text">
+        <h2>Support the Creator</h2>
+        <p>If you found this debt tracker helpful, consider buying a coffee for <span class="creator-name">Yash</span>!</p>
+        <div class="coffee-price">
+          <i class="fas fa-coffee"></i>
+          <p>One Coffee = ₹40</p>
+        </div>
+        <p class="support-text">Your support helps maintain and improve this tool ❤️</p>
+      </div>
+      <div class="payment-details">
+        <div class="qr-wrapper">
+          <img src="assests/WhatsApp Image 2025-01-05 at 23.59.08_8de73788.jpg" alt="Payment QR Code" class="payment-qr">
+        </div>
+        <div class="upi-details">
+          <p>UPI ID: <span class="upi-id">yashagrawalrkt123@okaxis</span></p>
+          <button class="copy-btn" id="copyUPI">
+            <i class="fas fa-copy"></i> Copy UPI ID
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section fade-in">
+    <div class="contact-container">
+      <div class="profile-image">
+        <img src="assests/WhatsApp Image 2025-01-06 at 00.00.50_14ac17cf.jpg" alt="Profile Picture">
+      </div>
+      <div class="profile-info">
+        <h2>About Me</h2>
+        <p>Hi! I'm Yash Agrawal,</p>
+        <br>
+        <p>I'm a student of Computer Science and Engineering at SST. I'm a passionate web developer dedicated to creating useful tools for financial management.</p>
+        <br>
+        <P>Hope you found this tool useful and if you have any suggestions or feedback, please feel free to contact me.</P>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/yash-agrawal-208841307/" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="yashagrawalrkt123@gmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+        </div>
+      </div>
+    </div>
+    <p class="footer">Happy Tracking! 🎉</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
