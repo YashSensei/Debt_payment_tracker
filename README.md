@@ -1,6 +1,8 @@
 Debt Tracker 💰
 A simple, intuitive web application to help you manage and track your debts with visual progress indicators.
 
+Demo her - @https://debt-payment-tracker.vercel.app/index.html
+
 Features ✨
 1.Debt Management:
    a.Add new debts with descriptions and amounts
